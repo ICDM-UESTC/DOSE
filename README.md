@@ -3,7 +3,7 @@
  DOSE employs two efficient condition-augmentation techniques to address the challenge that incorporating condition information into DDPMs for SE, based on two key insights: (1) We force the model to prioritize the condition factor when generating samples by training it with dropout operation; (2) We incorporate the condition information into the sampling process by providing an informative adaptive prior. Experiments demonstrate that our approach yields substantial improvements in high-quality and stable speech generation, consistency with the condition factor, and efficiency.
 
 ## Environment Requirements
-### Note: be careful with the repo version, chiefly pesq
+**Note: be careful with the repo version, chiefly pesq**
 We run the code on a computer with RTX-3090, i7 13700KF, and 128G memory. Install the dependencies via anaconda:
 
 ```
