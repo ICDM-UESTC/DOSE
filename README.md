@@ -53,8 +53,8 @@ python src/DOSE/inference.py --fast /path/to/model /path/to/condition /path/to/o
 	│	├── init.py 
 	│	├── main.py # run the model for training
 	│	├── dataset.py # Preprocess dataset and fill/crop the speech for the model running
-	│	├── inference.py # Run model for inference speech and adjust inference-steps
-	│	├── learner.py # Load the model params for training and inferencing and save checkpoints
+	│	├── inference.py # Run model for inferencing speech and adjust inference-steps
+	│	├── learner.py # Load the model params for training/inferencing and saving checkpoints
 	│	├── model.py # The neural network code of the proposed DOSE
 	│	├── params.py # The diffusions, model and speech params
 	└── README.md
