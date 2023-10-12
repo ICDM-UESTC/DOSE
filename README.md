@@ -44,4 +44,4 @@ We inference the audio via running:
 python src/DOSE/inference.py --fast /path/to/model /path/to/condition /path/to/outputdir
 ```
 
-The code of CDiffuSE is developed based on the code of [Diffwave](https://github.com/lmnt-com/diffwave) 
+The code of DOSE is developed based on the code of [Diffwave](https://github.com/lmnt-com/diffwave) 
