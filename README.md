@@ -19,7 +19,7 @@ conda activate DOSE
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
 ```
 ### install speech metrics repo:
-### Note: be careful with the repo version, chiefly pesq
+#### Note: be careful with the repo version, chiefly pesq
 ```
 pip install https://github.com/ludlows/python-pesq/archive/master.zip
 pip install pystoi
