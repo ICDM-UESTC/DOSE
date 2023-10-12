@@ -47,22 +47,15 @@ python src/DOSE/inference.py --fast /path/to/model /path/to/condition /path/to/o
 ## Folder Structure
 
 ```tex
-└── DOSE
-	├── datasets # Contains three large-scale real-world street-level IP geolocation datasets.
-	│	|── New_York # Street-level IP geolocation dataset collected from New York City including 91,808 IP addresses.
-	│	|── Los_Angeles # Street-level IP geolocation dataset collected from Los Angeles including 92,804 IP addresses.
-	│	|── Shanghai # Street-level IP geolocation dataset collected from Shanghai including 126,258 IP addresses.
-	├── lib # Contains model implementation files
-	│	|── layers.py # The code of the attention mechanism.
-	│	|── model.py # The core source code of the proposed TrustGeo
-	│	|── sublayers.py # The support file for layer.py
-	│	|── utils.py # Auxiliary functions, including the code of view fusion
-	├── asset # Contains saved checkpoints and logs when running the model
-	│	|── log # Contains logs when running the model 
-	│	|── model # Contains the saved checkpoints
-	├── preprocess.py # Preprocess dataset and execute IP clustering for the model running
-	├── main.py # Run model for training and test
-	├── test.py # Load checkpoint and then test
+└── DOSE──
+	├── src
+	│	├── init.py 
+	│	├── main.py # run the model for training
+	│	├── dataset.py # Preprocess dataset and fill/crop the speech for the model running
+	│	├── inference.py # Run model for inference speech and adjust inference-steps
+	│	├── learner.py # Load the model params for training and inferencing and save checkpoints
+	│	├── model.py # The neural network code of the proposed DOSE
+	│	├── params.py # The diffusions, model and speech params
 	└── README.md
 ```
 
