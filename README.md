@@ -10,7 +10,7 @@ Experiments demonstrate that our approach yields substantial improvements in hig
 ## Environment Requirements
 **Note: be careful with the repo version, chiefly pesq**
 
-The code was tested with `python 3.8.13`, `pytorch 1.13.1`, `cudatoolkit 11.7.0`. We run the code on a computer with `RTX-3090`, `i7 13700KF`, and `128G` memory. Install the dependencies via [Anaconda](https://www.anaconda.com/):
+ We run the code on a computer with `RTX-3090`, `i7 13700KF`, and `128G` memory. The code was tested with `python 3.8.13`, `pytorch 1.13.1`, `cudatoolkit 11.7.0`. Install the dependencies via [Anaconda](https://www.anaconda.com/):
 
 ```
 # create virtual environment
