@@ -4,7 +4,8 @@
 
 ## Environment Requirements
 **Note: be careful with the repo version, chiefly pesq**
-We run the code on a computer with RTX-3090, i7 13700KF, and 128G memory. Install the dependencies via anaconda:
+
+We run the code on a computer with `python 3.8.13`, cudatoolkit 11.7.0`,`RTX-3090`, i7 13700KF`, and `128G memory`. Install the dependencies via anaconda:
 
 ```
 # create virtual environment
