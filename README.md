@@ -1,5 +1,5 @@
 # DOSE: Diffusion Dropout with Adaptive Prior for Speech Enhancement
-![](https://img.shields.io/badge/python-3.8.13-green)![](https://img.shields.io/badge/pytorch-1.13.1-green)![](https://img.shields.io/badge/cudatoolkit-11.7.0-green)!
+![](https://img.shields.io/badge/python-3.8.13-green)![](https://img.shields.io/badge/pytorch-1.13.1-green)![](https://img.shields.io/badge/cudatoolkit-11.7.0-green)
 ## Brief
  DOSE employs two efficient condition-augmentation techniques to address the challenge that incorporating condition information into DDPMs for SE, based on two key insights: 
  *  We force the model to prioritize the condition factor when generating samples by training it with dropout operation;
@@ -10,7 +10,7 @@ Experiments demonstrate that our approach yields substantial improvements in hig
 ## Environment Requirements
 **Note: be careful with the repo version, chiefly pesq**
 
-We run the code on a computer with `python 3.8.13`, `pytorch 1.13.1`, `cudatoolkit 11.7.0`, `RTX-3090`, `i7 13700KF`, and `128G` memory. Install the dependencies via [Anaconda](https://www.anaconda.com/):
+The code was tested with `python 3.8.13`, `pytorch 1.13.1`, `cudatoolkit 11.7.0`. We run the code on a computer with 'RTX-3090`, `i7 13700KF`, and `128G` memory. Install the dependencies via [Anaconda](https://www.anaconda.com/):
 
 ```
 # create virtual environment
