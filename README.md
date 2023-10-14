@@ -32,7 +32,7 @@ pip install tensorboard
 ```
 
 ## How to train
-Before you start training, you'll need to prepare a training dataset. The default dataset is VOICEBANK-DEMAND dataset. You can **download them from [VOICEBANK-DEMAND](https://doi.org/10.7488/ds/2117) and resample it to 16k Hz**. By default, this implementation assumes the sampling steps are `35&15` steps and the sample rate of 16 kHz. If you need to change these value, edit [params.py](https://github.com/ICDM-UESTC/DOSE/blob/main/src/DOSE/params.py).
+Before you start training, you'll need to prepare a training dataset. The default dataset is VOICEBANK-DEMAND dataset. You can **download them from [VOICEBANK-DEMAND](https://doi.org/10.7488/ds/2117) and resample it to 16 kHz**. By default, this implementation assumes the sampling steps are `35&15` steps and the sample rate of 16 kHz. If you need to change these value, edit [params.py](https://github.com/ICDM-UESTC/DOSE/blob/main/src/DOSE/params.py).
 
 We train the model via running:
 
