@@ -8,7 +8,7 @@
 Experiments demonstrate that our approach yields substantial improvements in high-quality and stable speech generation, consistency with the condition factor, and efficiency.
 
 ## Environment Requirements
-**Note: be careful with the repo version, chiefly pesq**
+**Note: be careful with the repo version, especially pesq**
 
  We run the code on a computer with `RTX-3090`, `i7 13700KF`, and `128G` memory. The code was tested with `python 3.8.13`, `pytorch 1.13.1`, `cudatoolkit 11.7.0`. Install the dependencies via [Anaconda](https://www.anaconda.com/):
 
@@ -32,24 +32,24 @@ pip install tensorboard
 ```
 
 ## How to train
-Before you start training, you'll need to prepare a training dataset. The default dataset is VOICEBANK-DEMAND dataset. You can **download them from [VOICEBANK-DEMAND](https://doi.org/10.7488/ds/2117) and resample it to 16 kHz**. By default, this implementation assumes the sampling steps are `35&15` steps and the sample rate of 16 kHz. If you need to change these value, edit [params.py](https://github.com/ICDM-UESTC/DOSE/blob/main/src/DOSE/params.py).
+Before you start training, you'll need to prepare a training dataset. The default dataset is VOICEBANK-DEMAND dataset. You can **download them from [VOICEBANK-DEMAND](https://doi.org/10.7488/ds/2117) and resample them to 16 kHz**. By default, this implementation assumes the sampling steps are `35&15` steps and the sample rate of 16 kHz. If you need to change these values, edit [params.py](https://github.com/ICDM-UESTC/DOSE/blob/main/src/DOSE/params.py).
 
 We train the model via running:
 
 ```
 python src/DOSE/__main__.py /path/to/model
 ```
-## How to sampling
-We inference the audio via running:
+## How to inference
+We generate the audio via running:
 ```
-python src/DOSE/inference.py /path/to/model /path/to/condition /path/to/outputdir
+python src/DOSE/inference.py /path/to/model /path/to/condition /path/to/output_dir
 ```
 
 ## How to evaluate
 We evaluate the generated samples via running:
 
 ```
-python src/DOSE/metric.py /path/to/clean_speech /path/to/outputdir
+python src/DOSE/metric.py /path/to/clean_speech /path/to/output_dir
 ```
 
 ## Folder Structure
@@ -59,11 +59,11 @@ python src/DOSE/metric.py /path/to/clean_speech /path/to/outputdir
 	├── src
 	│	├── init.py 
 	│	├── main.py # run the model for training
-	│	├── dataset.py # Preprocess dataset and fill/crop the speech for the model running
+	│	├── dataset.py # Preprocess the dataset and fill/crop the speech for the model running
 	│	├── inference.py # Run model for inferencing speech and adjust inference-steps
 	│	├── learner.py # Load the model params for training/inferencing and saving checkpoints
 	│	├── model.py # The neural network code of the proposed DOSE
-	│	├── params.py # The diffusions, model and speech params
+	│	├── params.py # The diffusions, model, and speech params
 	└── README.md
 ```
 
