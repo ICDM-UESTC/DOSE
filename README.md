@@ -1,5 +1,15 @@
 # DOSE: Diffusion Dropout with Adaptive Prior for Speech Enhancement
 ![](https://img.shields.io/badge/python-3.8.13-green)![](https://img.shields.io/badge/pytorch-1.13.1-green)![](https://img.shields.io/badge/cudatoolkit-11.7.0-green)
+
+## Newest
+We upload the pre-trained model, trained on VB with 0.5 as the dropout ratio.
+
+We got:
+
+csig:3.8357 cbak:3.2350 covl:3.1840 pesq:2.5430 ssnr:8.9398 stoi:0.9335 on VB (step 1=40, step 2=15)
+
+csig:2.8673 cbak:2.1805 covl:2.1647 pesq:1.5709 ssnr:1.6121 stoi:0.8673 on CHIME-4 (step 1=35, step 2=0)
+
 ## Brief
  DOSE employs two efficient condition-augmentation techniques to address the challenge that incorporating condition information into DDPMs for SE, based on two key insights: 
  *  We force the model to prioritize the condition factor when generating samples by training it with dropout operation;
