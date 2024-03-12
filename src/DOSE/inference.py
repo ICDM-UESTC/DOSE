@@ -35,7 +35,8 @@ def predict(condition=None, model_dir=None, params=None, device=device, fast_sam
     if os.path.exists(f'{model_dir}/weights.pt'):
       checkpoint = torch.load(f'{model_dir}/weights.pt')
     else:
-      checkpoint = torch.load(model_dir)
+      # checkpoint = torch.load(model_dir)
+      checkpoint = torch.load(model_dir, map_location='cuda:0')
     model = DOSE(AttrDict(base_params)).to(device)
     model.load_state_dict(checkpoint['model'])
     model.eval()
