@@ -42,7 +42,14 @@ python src/DOSE/__main__.py /path/to/model
 ## How to sampling
 We inference the audio via running:
 ```
-python src/DOSE/inference.py --fast /path/to/model /path/to/condition /path/to/outputdir
+python src/DOSE/inference.py /path/to/model /path/to/condition /path/to/outputdir
+```
+
+## How to evaluate
+We evaluate the generated samples via running:
+
+```
+python src/DOSE/metric.py /path/to/clean_speech /path/to/outputdir
 ```
 
 ## Folder Structure
