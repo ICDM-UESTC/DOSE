@@ -190,7 +190,7 @@ def _train_impl(replica_id, model, dataset, args, params):
 
 def train(args, params):
   
-  dataset = from_path('./data/voicebank/clean_trainset_wav',
+  dataset = from_path('./data/voicebank/noisy_trainset_wav',
         './data/voicebank/clean_trainset_wav', params)
   device = torch.device('cuda', args.device_num)
   model = DOSE(params).to(device)
