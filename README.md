@@ -78,3 +78,14 @@ python src/DOSE/metric.py /path/to/clean_speech /path/to/output_dir
 ```
 
 The code of DOSE is developed based on the code of [Diffwave](https://github.com/lmnt-com/diffwave) 
+
+### Correction of Typographical Error in Experimental Results
+We have identified a typographical error in the experimental results presented in our paper. We sincerely apologize for any inconvenience this may have caused. Specifically, the error is in Table 1, under the "CHiME4" dataset for the "Unprocessed" method. The correct values are:
+
+- Original incorrect value:
+
+  STOI: **72.3** & PESQ: **1.22** & CSIG: **2.21** & CBAK: **1.95** & COVL: **1.63**
+  
+- Corrected value:
+
+  STOI: **87.0** & PESQ: **1.27** & CSIG: **2.61** & CBAK: **1.92** & COVL: **1.88**
