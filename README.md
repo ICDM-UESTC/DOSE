@@ -2,28 +2,29 @@
 ![](https://img.shields.io/badge/python-3.8.13-green)![](https://img.shields.io/badge/pytorch-1.13.1-green)![](https://img.shields.io/badge/cudatoolkit-11.7.0-green)
 
 ## Newest
-We upload the pre-trained model, trained on VB with 0.5 as the dropout ratio.
 
-We got:
-
-csig:3.8357 cbak:3.2350 covl:3.1840 pesq:2.5430 ssnr:8.9398 stoi:0.9335 on VB (step 1=40, step 2=15)
-
-csig:2.8673 cbak:2.1805 covl:2.1647 pesq:1.5709 ssnr:1.6121 stoi:0.8673 on CHIME-4 (step 1=35, step 2=0)
+We are currently finishing the extension paper for this work, and the project page will be released along with the completion of the extension.
 
 ## Brief
- DOSE employs two efficient condition-augmentation techniques to address the challenge that incorporating condition information into DDPMs for SE, based on two key insights: 
+ DOSE employs two efficient condition-augmentation techniques to address the challenge of incorporating condition information into DDPMs for SE, based on two key insights: 
  *  We force the model to prioritize the condition factor when generating samples by training it with dropout operation;
  *  We incorporate the condition information into the sampling process by providing an informative adaptive prior.
 
 Experiments demonstrate that our approach yields substantial improvements in high-quality and stable speech generation, consistency with the condition factor, and efficiency.
 
+We upload the [pre-trained model](https://github.com/ICDM-UESTC/DOSE/releases/tag/v1), trained on VB with 0.5 as the dropout ratio:
+
+csig:3.8357 cbak:3.2350 covl:3.1840 pesq:2.5430 ssnr:8.9398 stoi:0.9335 on VB (step 1=40, step 2=15)
+
+csig:2.8673 cbak:2.1805 covl:2.1647 pesq:1.5709 ssnr:1.6121 stoi:0.8673 on CHIME-4 (step 1=35, step 2=0)
+
 ## Environment Requirements
-**Note: be careful with the repo version, especially pesq**
+**Note: be careful with the repo version, especially PESQ**
 
  We run the code on a computer with `RTX-3090`, `i7 13700KF`, and `128G` memory. The code was tested with `python 3.8.13`, `pytorch 1.13.1`, `cudatoolkit 11.7.0`. Install the dependencies via [Anaconda](https://www.anaconda.com/):
 
 ```
-# create virtual environment
+# create a virtual environment
 conda create --name DOSE python=3.8.13
 
 # activate environment
