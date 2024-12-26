@@ -3,7 +3,7 @@
 
 ## Newest
 
-We are currently finishing the extension paper for this work, and the project page will be released along with the completion of the extension.
+We are currently working on an extended version of this work, and the project page will be released upon its completion.
 
 ## Brief
  DOSE employs two efficient condition-augmentation techniques to address the challenge of incorporating condition information into DDPMs for SE, based on two key insights: 
