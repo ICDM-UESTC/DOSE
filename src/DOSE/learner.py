@@ -138,7 +138,7 @@ class DOSELearner:
 
     audio = features['clean_speech']
     noisy = features['noisy_speech']
-
+    audio_orig = features['clean_speech'].clone()
 
     N,T= audio.shape
     device = audio.device
@@ -159,7 +159,7 @@ class DOSELearner:
       
       noisy_audio = noise_scale_sqrt * audio + (1.0 - noise_scale)**0.5 * noise
       predicted = self.model(noisy_audio, t, noisy)
-      loss = self.loss_fn(audio, predicted.squeeze(1))
+      loss = self.loss_fn(audio_orig, predicted.squeeze(1))
       
 
     self.scaler.scale(loss).backward()
