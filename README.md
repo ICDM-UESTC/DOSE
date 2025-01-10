@@ -12,7 +12,7 @@ We are currently working on an extended version of this work, and the project pa
 
 Experiments demonstrate that our approach yields substantial improvements in high-quality and stable speech generation, consistency with the condition factor, and efficiency.
 
-We fixed a bug with the loss function in learner.py
+We fixed a bug with the loss function in learner.py:
 ```python
 audio_orig = features['clean_speech'].clone()
 ...
