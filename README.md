@@ -12,19 +12,26 @@ We are currently working on an extended version of this work, and the project pa
 
 Experiments demonstrate that our approach yields substantial improvements in high-quality and stable speech generation, consistency with the condition factor, and efficiency.
 
-We found a bug in learner.py and fixed it：
+We fixed a bug with the loss function in learner.py
 ```python
 audio_orig = features['clean_speech'].clone()
 ...
 loss = self.loss_fn(audio_orig, predicted.squeeze(1))
 ```
-And retest on the dataset
+And retest on the VB and CHIME-4.
 
 We upload the [pre-trained model](https://github.com/ICDM-UESTC/DOSE/releases/tag/v1)(with bug in loss), trained on VB with 0.5 as the dropout ratio:
 
 csig:3.8357 cbak:3.2350 covl:3.1840 pesq:2.5430 ssnr:8.9398 stoi:0.9335 on VB (step 1=40, step 2=15)
 
 csig:2.8673 cbak:2.1805 covl:2.1647 pesq:1.5709 ssnr:1.6121 stoi:0.8673 on CHIME-4 (step 1=35, step 2=0)
+
+We also release the retrained [pre-trained model]((https://github.com/ICDM-UESTC/DOSE/releases/tag/v2)) after fixing the bug, also trained on VB with 0.5 as the dropout ratio:
+
+csig:3.8264 cbak:3.2791 covl:3.1965 pesq:2.5878 ssnr:9.3684 stoi:0.9336 on VB (step 1=40, step 2=10)
+
+csig:2.7520 cbak:2.1276 covl:2.0501 pesq:1.4693 ssnr:1.8087 stoi:0.8304 on CHIME-4 (step 1=10, step 2=0)
+
 
 ## Environment Requirements
 **Note: be careful with the repo version, especially PESQ**
