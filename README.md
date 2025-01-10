@@ -12,6 +12,12 @@ We are currently working on an extended version of this work, and the project pa
 
 Experiments demonstrate that our approach yields substantial improvements in high-quality and stable speech generation, consistency with the condition factor, and efficiency.
 
+We found a bug in the code and fixed it：
+```python
+audio_orig = features['clean_speech'].clone()
+...
+loss = self.loss_fn(audio_orig, predicted.squeeze(1))
+
 We upload the [pre-trained model](https://github.com/ICDM-UESTC/DOSE/releases/tag/v1), trained on VB with 0.5 as the dropout ratio:
 
 csig:3.8357 cbak:3.2350 covl:3.1840 pesq:2.5430 ssnr:8.9398 stoi:0.9335 on VB (step 1=40, step 2=15)
