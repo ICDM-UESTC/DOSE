@@ -12,13 +12,32 @@ We are currently working on an extended version of this work, and the project pa
 
 Experiments demonstrate that our approach yields substantial improvements in high-quality and stable speech generation, consistency with the condition factor, and efficiency.
 
-We fixed a bug with the loss function in learner.py:
+We found a bug with the loss function in learner.py:
 ```python
+audio = features['clean_speech']
+noisy = features['noisy_speech']
+...
+masks = torch.bernoulli(dropout) 
+for i in range(masks.size(0)):
+  if masks[i] == 1:
+      audio[i] = torch.randn_like(audio[i])
+...
+loss = self.loss_fn(audio, predicted.squeeze(1))
+```
+And fixed it:
+```python
+audio = features['clean_speech']
+noisy = features['noisy_speech']
 audio_orig = features['clean_speech'].clone()
+...
+masks = torch.bernoulli(dropout) 
+for i in range(masks.size(0)):
+  if masks[i] == 1:
+      audio[i] = torch.randn_like(audio[i])
 ...
 loss = self.loss_fn(audio_orig, predicted.squeeze(1))
 ```
-And retest on the VB and CHIME-4.
+And retest it after retraining on VB.
 
 
 We upload the [pre-trained model](https://github.com/ICDM-UESTC/DOSE/releases/tag/v1)(with bug in loss), trained on VB with 0.5 as the dropout ratio:
