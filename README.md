@@ -26,7 +26,7 @@ csig:3.8357 cbak:3.2350 covl:3.1840 pesq:2.5430 ssnr:8.9398 stoi:0.9335 on VB (s
 
 csig:2.8673 cbak:2.1805 covl:2.1647 pesq:1.5709 ssnr:1.6121 stoi:0.8673 on CHIME-4 (step 1=35, step 2=0)
 
-We also release the retrained [pre-trained model]((https://github.com/ICDM-UESTC/DOSE/releases/tag/v2)) after fixing the bug, also trained on VB with 0.5 as the dropout ratio:
+We also release the retrained [pre-trained model](https://github.com/ICDM-UESTC/DOSE/releases/tag/v2) after fixing the bug, also trained on VB with 0.5 as the dropout ratio:
 
 csig:3.8264 cbak:3.2791 covl:3.1965 pesq:2.5878 ssnr:9.3684 stoi:0.9336 on VB (step 1=40, step 2=10)
 
