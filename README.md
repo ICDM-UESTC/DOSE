@@ -3,7 +3,7 @@
 
 ## Newest
 
-We are currently working on an extended version of this work, and the project page will be released upon its completion.
+The extended version has been submitted for review, and the audio samples are available at [here](https://yesq11.github.io/DOSEPLUS).
 
 ## Brief
  DOSE employs two efficient condition-augmentation techniques to address the challenge of incorporating condition information into DDPMs for SE, based on two key insights: 
